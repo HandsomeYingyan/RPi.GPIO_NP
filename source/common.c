@@ -23,6 +23,7 @@ SOFTWARE.
 #include "Python.h"
 #include "c_gpio.h"
 #include "common.h"
+#include "sunxi_pins.h"
 
 int gpio_mode = MODE_UNKNOWN;
 
@@ -61,6 +62,35 @@ const int physToGpio_neo [MAX_PIN_COUNT] ={
     -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
 };
 
+static int physToGpio_tiny200 [MAX_PIN_COUNT] ={
+        -1,         // 0
+        /* 24 Pin */
+        GPIO_PE11,   -1,  //  1,  2
+        GPIO_PE10,   -1,  //  3,  4
+        GPIO_PE09,   -1,  //  5,  6
+        GPIO_PE08,   -1,  //  7,  8
+        GPIO_PE07,   -1,  //  9, 10
+        GPIO_PE06,   -1,  // 11, 12
+        GPIO_PE05,   -1,  // 13, 14
+        GPIO_PE04,   -1,  // 15, 16
+        GPIO_PE03,   GPIO_PA00,  // 17, 18
+        GPIO_PE02,   GPIO_PA01,  // 19, 20
+        GPIO_PE01,   GPIO_PA02,  // 21, 22
+        GPIO_PE00,   GPIO_PA03,  // 23, 24
+        /* 12 Pin */
+        -1, -1,   // 25, 26
+        -1, -1,   // 27, 28
+        -1, -1,   // 29, 30
+        -1, -1,   // 31, 32
+        -1, -1,   // 33, 34
+        -1, -1,   // 35, 36
+        -1, -1,   // 37, 38
+        /* 39~63 */
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        /* 64~73 */
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+};
 
 
 const int physToGpio_neocore [MAX_PIN_COUNT] ={

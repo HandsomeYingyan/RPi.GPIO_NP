@@ -56,6 +56,7 @@ BoardHardwareInfo gAllBoardHardwareInfo[] = {
     {"Allwinnersun8iFamily", 0, NanoPi_Hero, "NanoPi-Hero", "7(0)"},
     {"Allwinnersun8iFamily", 0, NanoPi_Duo2, "NanoPi-Duo2", "8(0)"},
     {"Allwinnersun8iFamily", 0, NanoPi_R1, "NanoPi-R1", "9(0)"},
+    {"AllwinnersunivFamily", 0, TINY200, "Widora-Tiny200", "10(0)"},
 
     // a64
     {"sun50iw1p1", 0, NanoPi_A64, "NanoPi-A64", "0"},
@@ -210,10 +211,14 @@ int getBoardType(BoardHardwareInfo** retBoardInfo) {
     const char* h3 = "sun8i";
     const char* h5 = "sun50iw2";
     const char* h3_kernel4 = "Allwinnersun8iFamily";
-        const char* h5_kernel4 = "Allwinnersun50iw2Family";
+    const char* h5_kernel4 = "Allwinnersun50iw2Family";
+    const char* f1cx00s_kernel4 = "AllwinnersunivFamily";
 
     //a64 and amlogic, only check hardware
-    if (strncasecmp(hardware, a64, strlen(a64)) == 0 || strncasecmp(hardware, amlogic, strlen(amlogic)) == 0) {
+    if (strncasecmp(hardware, a64, strlen(a64)) == 0
+       || strncasecmp(hardware, amlogic, strlen(amlogic)) == 0
+          || strncasecmp(hardware, f1cx00s_kernel4, strlen(f1cx00s_kernel4)) == 0
+            ) {
         for (i=0; i<(sizeof(gAllBoardHardwareInfo)/sizeof(BoardHardwareInfo)); i++) {
             if (strncasecmp(gAllBoardHardwareInfo[i].kernelHardware, hardware, strlen(gAllBoardHardwareInfo[i].kernelHardware)) == 0) {
                 if (retBoardInfo != 0) {

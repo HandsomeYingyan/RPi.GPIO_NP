@@ -43,6 +43,7 @@ const int physToGpio_m1 [MAX_PIN_COUNT];
 const int physToGpio_duo [MAX_PIN_COUNT];
 const int physToGpio_duo2 [MAX_PIN_COUNT];
 const int physToGpio_neocore [MAX_PIN_COUNT];
+const int physToGpio_tiny200 [MAX_PIN_COUNT];
 
 // const int pinTobcm_BP [MAX_PIN_COUNT];
 // const int physToGpioR3 [MAX_PIN_COUNT];

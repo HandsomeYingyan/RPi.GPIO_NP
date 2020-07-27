@@ -694,7 +694,9 @@ PyMODINIT_FUNC initGPIO(void)
        pin_to_gpio = &physToGpio_duo2;
     } else if (faBoardId == NanoPi_NEO_Core || faBoardId == NanoPi_NEO_Core2) {
        pin_to_gpio = &physToGpio_neocore;
-    } else {
+    } else if (faBoardId == TINY200) {
+        pin_to_gpio = &physToGpio_tiny200;
+    }else {
        pin_to_gpio = NULL;
     }
 
