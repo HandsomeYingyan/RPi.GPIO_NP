@@ -16,6 +16,7 @@ NanoPi M1 Plus
 NanoPi NEO Core  
 NanoPi NEO Core2  
 NanoPi K1 Plus  
+Widora TIny200
 
 ## Installation
 Log into your nano board via SSH, open a terminal and install the WiringNP library by running the following commands:
