@@ -4,7 +4,7 @@ The RPi.GPIO_NP API usage are the same to the original RPi.GPIO.
 You can donwload the RPi.GPIO_NP from:
 https://github.com/friendlyarm/RPi.GPIO_NP
 
-## Currently supported boards (Allwinner H3/H5)
+## Currently supported boards (Allwinner H3/H5/F1C200s)
 NanoPi Neo  
 NanoPi Neo Air  
 NanoPi Duo  
